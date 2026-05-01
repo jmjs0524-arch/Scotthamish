@@ -65,9 +65,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0d0d0d] text-[#cfcfcf] selection:bg-[#070a38] selection:text-white" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontStyle: "normal" }}>
-      <header className="fixed left-0 top-0 z-50 w-full border-b border-white/5 bg-[#0d0d0d]/90 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 text-xs font-semibold uppercase tracking-[0.22em] text-[#8a90c7]">
+    <div className="min-h-screen bg-[#2a2a2a] text-white selection:bg-[#c9b37e] selection:text-black" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontStyle: "normal" }}>
+      <header className="fixed left-0 top-0 z-50 w-full border-b border-white/5 bg-[#2a2a2a]/80 backdrop-blur-md">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#c9b37e]">
           <div className="hidden gap-8 md:flex">
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#product" className="hover:text-white transition-colors">Product</a>
@@ -75,242 +75,226 @@ export default function App() {
             <a href="#exhibition" className="hover:text-white transition-colors">Exhibition</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </div>
-          <a href="#home" className="ml-auto font-serif text-2xl normal-case tracking-normal text-white md:ml-0 hover:text-[#8a90c7] transition-colors">Scott Hamish</a>
+          <a href="#home" className="ml-auto font-serif text-2xl font-bold normal-case tracking-tight text-white md:ml-0 hover:text-[#c9b37e] transition-colors">Scott Hamish</a>
         </nav>
       </header>
 
-      <section id="home" className="relative flex min-h-screen items-center overflow-hidden bg-black">
+      <section id="home" className="relative flex min-h-screen items-center overflow-hidden">
         <img
           src="https://drive.google.com/thumbnail?id=1qyhInF4EW745qRsOQ-GEVychXdDLG8S7&sz=w2400"
           alt="Scott Hamish Scottish heritage background"
-          className="absolute inset-0 h-full w-full object-cover opacity-90"
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-black/10" />
+        <div className="absolute inset-0 bg-black/45" />
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
-          className="relative z-10 mx-auto w-full max-w-7xl px-6 text-white"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="relative z-10 mx-auto w-full max-w-7xl px-6"
         >
-          <p className="mb-5 inline-block border border-[#8a90c7]/40 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.45em] text-[#8a90c7]">Established 2026</p>
-          <h1 className="max-w-4xl text-6xl font-medium leading-[0.95] tracking-[-0.04em] md:text-8xl lg:text-9xl">
+          <p className="mb-6 inline-block text-[10px] font-bold uppercase tracking-[0.5em] text-[#c9b37e]">Established 2026</p>
+          <h1 className="max-w-4xl text-6xl font-bold leading-[0.9] tracking-[-0.04em] md:text-8xl lg:text-[7rem]">
             Timeless<br />Scottish Heritage
           </h1>
-          <p className="mt-8 max-w-xl text-lg font-medium leading-8 text-[#cfcfcf] md:text-xl">
+          <p className="mt-8 max-w-2xl text-lg font-medium leading-relaxed text-[#d1d1d1] md:text-xl">
             Premium men’s grooming care inspired by the rugged dignity, independence, and natural strength of Scotland.
           </p>
-          <div className="mt-10">
-            <a href="#about" className="inline-block bg-white px-9 py-5 text-xs font-bold uppercase tracking-[0.25em] text-black transition hover:bg-[#8a90c7] hover:text-white">
+          <div className="mt-12">
+            <a href="#about" className="inline-block border-2 border-white bg-transparent px-12 py-5 text-[10px] font-bold uppercase tracking-[0.3em] text-white transition hover:bg-white hover:text-black shadow-2xl">
               Discover Heritage
             </a>
           </div>
         </motion.div>
       </section>
 
-      <section id="about" className="bg-[#070a38] py-28">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-14 md:grid-cols-[0.9fr_1.1fr] md:items-center">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#8a90c7]">About Scott Hamish</p>
-              <h2 className="mt-5 font-serif text-4xl leading-tight md:text-5xl text-white">Scotland, The Great Heritage for your skin</h2>
-            </div>
-            <div className="space-y-6 text-[15px] leading-8 text-[#cfcfcf] font-medium opacity-90">
-              <p>
-                With a rugged yet gentle design, a history of struggle for freedom and independence, a unique culture and proud spirit that only they possess, and the thoughts, names, and inventions that changed the world, Scott Hamish carries the spirit of the Scots.
-              </p>
-              <p>
-                Scott Hamish embodies Scotland’s heritage, offering grooming care that proposes solutions to men’s skin concerns and styling needs while making a man’s life more distinguished.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-20 grid gap-6 md:grid-cols-3">
-            {[
-              ["Urban Classy", "A refined, city-ready sensibility for men who value elegance and self-care."],
-              ["Positive Energy", "A confident grooming ritual that brings vitality to daily life."],
-              ["Timeless One Thing", "A lasting, classic approach to men’s skincare beyond passing trends."],
-            ].map(([title, text]) => (
-              <div key={title} className="border border-[#8a90c7]/10 bg-[#070a38]/50 p-8 shadow-sm">
-                <h3 className="font-serif text-2xl text-white mb-4">{title}</h3>
-                <p className="text-sm leading-7 text-[#cfcfcf] font-medium opacity-80">{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="product" className="bg-[#0d0d0d] px-6 py-28 border-y border-white/5">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 flex items-end justify-between gap-6">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#8a90c7]">Product</p>
-              <h2 className="mt-5 font-serif text-4xl md:text-5xl text-white">Premium Grooming Collection</h2>
-            </div>
-            <div className="flex gap-3">
-              <button onClick={() => scrollProducts("left")} className="rounded-full border border-white/20 p-3 text-white hover:bg-[#070a38] transition-colors" aria-label="Scroll products left"><ChevronLeft size={20} /></button>
-              <button onClick={() => scrollProducts("right")} className="rounded-full border border-white/20 p-3 text-white hover:bg-[#070a38] transition-colors" aria-label="Scroll products right"><ChevronRight size={20} /></button>
-            </div>
-          </div>
-
-          <div ref={productRef} className="flex snap-x gap-6 overflow-x-auto scroll-smooth pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {products.map((product) => (
-              <article key={product.name} className="min-w-[280px] snap-start bg-[#070a38]/30 p-5 shadow-sm md:min-w-[360px] group border border-white/5">
-                <div className="relative h-80 overflow-hidden bg-[#161512] mb-6">
-                  <img src={product.image} alt={product.name} className="h-full w-full object-cover transition duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100" referrerPolicy="no-referrer" />
-                  <span className="absolute left-4 top-4 bg-white px-3 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-black shadow-lg">{product.tag}</span>
-                </div>
-                <h3 className="font-serif text-2xl text-white mb-2 tracking-tight">{product.name}</h3>
-                <p className="text-sm leading-6 text-[#cfcfcf] opacity-80">{product.subtitle}</p>
-                <div className="mt-6 pt-6 border-t border-white/10 flex justify-between items-center">
-                  <span className="text-[9px] font-bold uppercase tracking-widest text-[#8a90c7]">Details</span>
-                  <div className="w-2 h-2 rounded-full bg-[#070a38]"></div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="reviews" className="bg-[#070a38] py-28">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#8a90c7]">Reviews</p>
-            <h2 className="mt-5 font-serif text-4xl md:text-5xl text-white">Media & Video Reviews</h2>
-            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-[#cfcfcf] font-medium opacity-80">Embed YouTube videos here to present product reviews, grooming routines, or buyer-facing brand content.</p>
-          </div>
-          <div className="mt-14 grid gap-7 md:grid-cols-3">
-            {videos.map((video) => (
-              <article key={video.title} className="bg-[#0d0d0d]/40 p-5 shadow-sm group border border-white/5">
-                <div className="relative aspect-video overflow-hidden bg-black mb-5">
-                  <iframe className="h-full w-full opacity-60 group-hover:opacity-100 transition-opacity" src={video.embed} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-                  <div className="pointer-events-none absolute left-4 top-4 rounded-full bg-white/90 p-2 text-black shadow-md"><Play size={16} fill="black" /></div>
-                </div>
-                <h3 className="font-serif text-xl text-white mb-2">{video.title}</h3>
-                <p className="text-sm leading-6 text-[#cfcfcf] opacity-80">{video.caption}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="exhibition" className="bg-[#0d0d0d] px-6 py-28 text-white border-b border-white/5">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#8a90c7]">Exhibition</p>
-            <h2 className="mt-5 font-serif text-4xl tracking-[0.12em] md:text-5xl">VIETBEAUTY & COSMOBEAUTÉ VIETNAM 2026</h2>
-            <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-[#cfcfcf] font-medium opacity-80">
-              Scott Hamish will meet global beauty and grooming buyers at Vietnam’s leading international beauty exhibition.
-            </p>
-          </div>
-
-          <div className="grid gap-12 md:grid-cols-[1fr_0.9fr] md:items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="border border-white/5 bg-[#070a38]/20 p-10 text-center shadow-sm relative group"
-            >
-              <div className="absolute top-0 left-0 w-full h-1 bg-[#e73593] opacity-40"></div>
-              <div className="mx-auto max-w-xl">
-                <div className="text-center font-serif text-5xl font-semibold leading-none tracking-tight text-[#e73593] md:text-7xl">
-                  cosmobeauté
-                </div>
-                <div className="mb-8 text-right text-xl text-[#e73593]">Vietnam</div>
-                <div className="text-6xl font-bold tracking-tight md:text-8xl flex justify-center items-baseline gap-1">
-                  <span className="font-light text-white/40">viet</span><span className="text-[#006b3f]">beauty</span>
-                </div>
-                <p className="mt-4 text-sm font-bold uppercase tracking-widest text-[#cfcfcf]/60">Vietnam’s Premier International Beauty Show</p>
-              </div>
-              <div className="mt-10 border-t border-white/10 pt-8 text-sm leading-8 text-[#cfcfcf]/80 flex justify-between items-center">
-                <div className="text-left">
-                   <p className="text-[10px] font-bold uppercase tracking-widest text-[#8a90c7] mb-1">Venue</p>
-                   <p>Ho Chi Minh City, Vietnam</p>
-                </div>
-                <div className="text-right">
-                   <p className="text-[10px] font-bold uppercase tracking-widest text-[#8a90c7] mb-1">Date</p>
-                   <p className="font-serif text-xl text-white">2026.07.23</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-7"
-            >
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#8a90c7]">Buyer Meeting</p>
-              <h3 className="font-serif text-4xl leading-tight md:text-4xl text-white">Meet Scott Hamish in Vietnam</h3>
-              <p className="text-base leading-8 text-[#cfcfcf] opacity-90">
-                Scott Hamish is ready to meet premium beauty, grooming, retail, and distribution partners looking for a distinctive men’s skincare brand with Scottish heritage and mature masculine positioning.
-              </p>
-              <p className="text-base leading-8 text-[#cfcfcf] opacity-90">
-                Book a meeting to discuss product lineup, distribution opportunities, retail positioning, and long-term partnership potential in Vietnam and Southeast Asia.
-              </p>
-              <div className="pt-4">
-                <a href="#booking" className="inline-block border border-white px-10 py-5 text-xs font-bold uppercase tracking-[0.25em] transition hover:bg-[#070a38] hover:border-[#070a38] text-white shadow-lg">Book a Meeting</a>
-              </div>
-            </motion.div>
-          </div>
-
-          <motion.div 
-            id="booking" 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section id="about" className="relative flex min-h-screen items-center overflow-hidden bg-[#2a2a2a]">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-6">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="mt-20 bg-[#070a38]/40 p-4 text-white shadow-2xl md:p-8 border border-white/5"
+            transition={{ duration: 1 }}
+            className="max-w-2xl"
           >
-            <div className="mb-5 flex items-center justify-between border-b border-white/10 pb-5">
-              <div className="space-y-1">
-                <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#8a90c7]">Reservation Channel</p>
-                <h3 className="font-serif text-3xl">Schedule a Meeting</h3>
-              </div>
-              <Calendar size={24} className="opacity-50" />
+            <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#c9b37e] mb-8">The Brand Vision</p>
+            <h2 className="font-serif text-5xl font-bold leading-tight md:text-7xl text-white tracking-[-0.03em] mb-10">Scotland, The Great Heritage for Your Skin</h2>
+            <div className="space-y-8 text-lg md:text-xl leading-relaxed text-[#d1d1d1] font-medium max-w-xl">
+              <p>
+                Scott Hamish carries the spirit of the Scots—rugged yet gentle, rooted in a history of independence and proud tradition.
+              </p>
+              <p>
+                We embody Scotland’s legacy, offering grooming solutions that honor masculine skin concerns while elevating a man's daily life to something more distinguished.
+              </p>
             </div>
-            <div className="min-h-[620px] overflow-hidden border border-white/15 bg-white">
-              <iframe
-                src="https://cal.com/scott-hamish/meeting?embed=true"
-                title="Book a meeting with Scott Hamish"
-                className="h-[620px] w-full"
-              />
-            </div>
-            <p className="mt-4 text-center text-[10px] leading-6 text-white/40 uppercase tracking-widest font-bold">Secure Calendar Interface Powered by Cal.com</p>
           </motion.div>
         </div>
       </section>
 
-      <section id="contact" className="bg-[#070a38] py-28 border-b border-white/5">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#8a90c7]">Contact</p>
-            <h2 className="mt-5 font-serif text-4xl md:text-5xl text-white">Contact Us</h2>
-          </div>
-          <form className="mt-14 grid gap-5">
-            <div className="grid gap-5 md:grid-cols-2">
-              <input className="border border-white/10 bg-[#0d0d0d] px-5 py-4 text-sm text-white outline-none focus:border-[#8a90c7] transition-colors" placeholder="Your Name" />
-              <input className="border border-white/10 bg-[#0d0d0d] px-5 py-4 text-sm text-white outline-none focus:border-[#8a90c7] transition-colors" placeholder="Your Email" />
+      <section id="product" className="bg-[#2a2a2a] py-32 border-y border-white/5">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-20 flex items-end justify-between gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#c9b37e] mb-4">Grooming Collection</p>
+              <h2 className="font-serif text-5xl font-bold md:text-7xl text-white tracking-[-0.03em]">Premium Range</h2>
+            </motion.div>
+            <div className="flex gap-4">
+              <button onClick={() => scrollProducts("left")} className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-[#c9b37e] hover:text-black hover:border-[#c9b37e] transition-all" aria-label="Scroll left"><ChevronLeft size={24} /></button>
+              <button onClick={() => scrollProducts("right")} className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-[#c9b37e] hover:text-black hover:border-[#c9b37e] transition-all" aria-label="Scroll right"><ChevronRight size={24} /></button>
             </div>
-            <input className="border border-white/10 bg-[#0d0d0d] px-5 py-4 text-sm text-white outline-none focus:border-[#8a90c7] transition-colors" placeholder="Company / Buyer Type" />
-            <textarea className="min-h-44 border border-white/10 bg-[#0d0d0d] px-5 py-4 text-sm text-white outline-none focus:border-[#8a90c7] transition-colors resize-none" placeholder="How can we help you?" />
-            <button type="button" className="bg-white px-8 py-5 text-xs font-bold uppercase tracking-[0.25em] text-black transition hover:bg-[#8a90c7] hover:text-white shadow-xl">Send Message</button>
+          </div>
+
+          <div ref={productRef} className="flex snap-x gap-8 overflow-x-auto scroll-smooth pb-12 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            {products.map((product, idx) => (
+              <motion.article 
+                key={product.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="min-w-[300px] md:min-w-[420px] snap-start group"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden bg-[#111] mb-8">
+                  <img src={product.image} alt={product.name} className="h-full w-full object-cover transition duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100" referrerPolicy="no-referrer" />
+                  <span className="absolute left-6 top-6 bg-[#c9b37e] px-4 py-2 text-[9px] font-bold uppercase tracking-[0.2em] text-black shadow-2xl">{product.tag}</span>
+                </div>
+                <h3 className="font-serif text-3xl font-bold text-white mb-3 tracking-tight">{product.name}</h3>
+                <p className="text-base text-[#d1d1d1] leading-relaxed font-medium">{product.subtitle}</p>
+                <div className="mt-8 pt-8 border-t border-white/5 flex justify-between items-center">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#c9b37e]">Product Inquiry</span>
+                  <div className="w-3 h-[2px] bg-[#c9b37e]"></div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" className="bg-[#2a2a2a] py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center mb-20">
+            <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#c9b37e] mb-6">Media Presence</p>
+            <h2 className="font-serif text-5xl font-bold md:text-7xl text-white tracking-[-0.03em]">Video Reviews</h2>
+            <p className="mx-auto mt-8 max-w-2xl text-lg text-[#d1d1d1] font-medium">Explore the experiences of those who have embraced the Scott Hamish grooming routine.</p>
+          </div>
+          <div className="grid gap-10 md:grid-cols-3">
+            {videos.map((video, idx) => (
+              <motion.article 
+                key={video.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="group border border-white/5 bg-[#0a0a0a] p-6 shadow-2xl"
+              >
+                <div className="relative aspect-video overflow-hidden bg-black mb-8">
+                  <iframe className="h-full w-full opacity-70 group-hover:opacity-100 transition-opacity" src={video.embed} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                  <div className="pointer-events-none absolute left-6 top-6 rounded-full bg-[#c9b37e] p-2 text-black shadow-xl"><Play size={16} fill="black" /></div>
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-white mb-4 tracking-tight">{video.title}</h3>
+                <p className="text-sm leading-relaxed text-[#d1d1d1] font-medium">{video.caption}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="exhibition" className="bg-[#2a2a2a] py-32 border-t border-white/5">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-16 md:grid-cols-2 md:items-start">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#c9b37e] mb-6">Exhibition</p>
+              <h2 className="font-serif text-5xl font-bold leading-[1.1] md:text-6xl text-white tracking-[-0.03em] mb-12">Vietbeauty & <br/>Cosmobeauté 2026</h2>
+              
+              <div className="space-y-12">
+                <div className="flex gap-10 items-start">
+                  <div className="text-[#c9b37e] mt-1"><Calendar size={24} /></div>
+                  <div>
+                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-[#c9b37e] mb-2">Exhibition Date</h4>
+                    <p className="font-serif text-3xl font-bold text-white">2026.07.23 — 07.25</p>
+                  </div>
+                </div>
+                <div className="flex gap-10 items-start">
+                  <div className="text-[#c9b37e] mt-1"><Mail size={24} /></div>
+                  <div>
+                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-[#c9b37e] mb-2">Venue</h4>
+                    <p className="font-serif text-3xl font-bold text-white">Ho Chi Minh City, Vietnam</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-16">
+                <a href="#booking" className="inline-block bg-[#c9b37e] px-12 py-6 text-[10px] font-bold uppercase tracking-[0.3em] text-black transition hover:bg-white shadow-2xl">
+                  Book a Meeting
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div
+              id="booking"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-[#0a0a0a] p-4 md:p-8 border border-white/10 shadow-[0_0_50px_rgba(201,179,126,0.05)]"
+            >
+              <div className="mb-6 flex items-center justify-between border-b border-white/5 pb-6">
+                <div>
+                  <p className="text-[9px] font-bold uppercase tracking-widest text-[#c9b37e] mb-1">Reservation Portal</p>
+                  <h3 className="font-serif text-3xl font-bold text-white">Schedule Meeting</h3>
+                </div>
+                <Calendar size={24} className="opacity-30" />
+              </div>
+              <div className="min-h-[600px] bg-white overflow-hidden">
+                 <iframe src="https://cal.com/scott-hamish/meeting?embed=true" title="Meeting Slot" className="w-full h-[600px]" />
+              </div>
+              <p className="mt-6 text-center text-[10px] uppercase tracking-widest font-bold text-white/30">Connect directly with our global distribution team</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="bg-[#2a2a2a] py-40">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="text-center mb-16">
+            <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#c9b37e] mb-6">Contact Us</p>
+            <h2 className="font-serif text-5xl font-bold md:text-6xl text-white tracking-[-0.03em]">Join the Heritage</h2>
+          </div>
+          <form className="grid gap-8">
+            <div className="grid gap-8 md:grid-cols-2">
+              <input className="border-b border-white/20 bg-transparent py-5 text-lg text-white outline-none focus:border-[#c9b37e] transition-colors placeholder:text-white/20 font-medium" placeholder="Name" />
+              <input className="border-b border-white/20 bg-transparent py-5 text-lg text-white outline-none focus:border-[#c9b37e] transition-colors placeholder:text-white/20 font-medium" placeholder="Email" />
+            </div>
+            <input className="border-b border-white/20 bg-transparent py-5 text-lg text-white outline-none focus:border-[#c9b37e] transition-colors placeholder:text-white/20 font-medium" placeholder="Company / Region" />
+            <textarea className="min-h-32 border-b border-white/20 bg-transparent py-5 text-lg text-white outline-none focus:border-[#c9b37e] transition-colors placeholder:text-white/20 font-medium resize-none" placeholder="Message" />
+            <button type="button" className="mt-10 bg-white px-12 py-6 text-[10px] font-bold uppercase tracking-[0.4em] text-black transition hover:bg-[#c9b37e] shadow-2xl">
+              Send Message
+            </button>
           </form>
         </div>
       </section>
 
-      <footer className="px-6 py-12 bg-[#0d0d0d]">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-10 text-sm text-[#cfcfcf] md:flex-row items-start font-sans">
-          <div className="space-y-4">
-            <h3 className="font-serif text-3xl text-white tracking-tight">Scott Hamish</h3>
-            <p className="max-w-xs leading-relaxed opacity-80">Premium Scottish heritage grooming care for the modern gentleman.</p>
+      <footer className="bg-[#2a2a2a] py-20 border-t border-white/5">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-16 px-6 text-sm text-white/40 md:flex-row items-start font-sans">
+          <div className="space-y-6">
+            <h3 className="font-serif text-3xl font-bold text-white tracking-tighter">Scott Hamish</h3>
+            <p className="max-w-xs leading-relaxed font-medium">Defining the modern gentleman through premium Scottish-inspired grooming care.</p>
           </div>
-          <div className="grid grid-cols-2 gap-16 md:text-right">
-             <div className="space-y-3">
-               <h4 className="text-[10px] font-bold uppercase tracking-widest text-white">Connect</h4>
-               <p className="flex items-center gap-2 md:justify-end opacity-80 hover:text-white transition-all"><Mail size={14} /> partner@scotthamish.com</p>
+          <div className="grid grid-cols-2 gap-20 md:text-right">
+             <div className="space-y-4">
+               <h4 className="text-[10px] font-bold uppercase tracking-widest text-white">Contact</h4>
+               <p className="flex items-center gap-2 md:justify-end hover:text-white transition-colors cursor-pointer"><Mail size={14} /> partner@scotthamish.com</p>
              </div>
-             <div className="space-y-3">
+             <div className="space-y-4">
                <h4 className="text-[10px] font-bold uppercase tracking-widest text-white">Legal</h4>
-               <p className="opacity-80">© 2026 Scott Hamish.</p>
+               <p className="hover:text-white transition-colors cursor-pointer">© 2026 Scott Hamish. All rights reserved.</p>
              </div>
           </div>
         </div>
