@@ -127,7 +127,7 @@ export default function App() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="relative z-10 mx-auto w-full max-w-7xl px-6"
         >
-          <p className="mb-6 inline-block text-[10px] font-bold uppercase tracking-[0.5em] text-[#9a9a9a]">Established 2026</p>
+          <p className="mb-6 inline-block text-[10px] font-bold uppercase tracking-[0.5em] text-[#9a9a9a]">Established 2020</p>
           <h1 className="max-w-4xl text-6xl font-semibold font-display leading-[0.95] tracking-[-0.01em] md:text-8xl lg:text-[7.5rem] text-white uppercase italic-none">
             Heritage<br />& Strength
           </h1>
@@ -219,7 +219,7 @@ export default function App() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center mb-20">
             <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#9a9a9a] mb-6">Media Presence</p>
-            <h2 className="font-display text-5xl font-semibold leading-[0.95] md:text-7xl text-white tracking-[-0.01em] uppercase">Video Reviews</h2>
+            <h2 className="font-display text-5xl font-semibold leading-[0.95] md:text-7xl text-white tracking-[-0.01em] uppercase">Reviews</h2>
             <p className="mx-auto mt-8 max-w-2xl text-lg text-[#cfcfcf] font-medium">Explore the experiences of those who have embraced the Scott Hamish grooming routine.</p>
           </div>
           <div className="grid gap-10 md:grid-cols-3">
